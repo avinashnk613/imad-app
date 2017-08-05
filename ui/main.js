@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 var element = document.getElementById("main-text");
 element.innerHTML = 'New Value';
 
@@ -14,4 +14,14 @@ function moveRight()
 img.onclick = function ()
 {
   var interval = setInterval(moveRight, 10);
+};
+*/
+
+var button = document.getElementById('counter');
+var counter = 0;
+
+button.onClick = function()
+{
+  counter = counter + 1;
+  span.innerHTML = counter.toString();
 };
