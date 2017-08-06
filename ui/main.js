@@ -34,7 +34,7 @@ button.onclick = function () {
         }
     };
     //Make the request
-    request.open('GET', 'http://http://avinashnk613.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://avinashnk613.imad.hasura-app.io/counter', true);
     request.send(null);
   
 };
