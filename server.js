@@ -81,8 +81,9 @@ app.get('/submit-name', function(req, res) {
 });
 
 app.get('/article/:articleName', function(req, res) {
-
-    pool.query("select * from article where title = '" +req.params.articleName +"'", function(err, result) {
+    
+    // pool.query("select * from article where title = '" +req.params.articleName +"'", function(err, result) {
+     pool.query("select * from article where title = $1", [req.params.articleName], function(err, result) {
         if(err) {
             res.status(500).send(err.toString());
         } else {
